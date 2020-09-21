@@ -16,6 +16,7 @@ calculate_s3_etag <- function(file_path, chunk_size = 100 * 1024**2){
     md5 <- c(md5, list(r))
   }
   md5 <- unlist(md5)
+  # Digest the file into md5. Serialize = FALSE makes it compliant with the aws api.
   list('etag' = digest::digest(as.raw(md5), 'md5', serialize = FALSE),
        'size' = length(md5))
 }
