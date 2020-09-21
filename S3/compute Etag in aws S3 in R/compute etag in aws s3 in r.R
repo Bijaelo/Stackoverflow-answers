@@ -22,7 +22,7 @@ calculate_s3_etag <- function(file_path, chunk_size = 100 * 1024**2){
 # Import tag from S3
 if(key != ''){
   head <- head_object(object = obj,
-                      bucket = pbucket,
+                      bucket = bucket,
                       key = key,
                       secret = secret,
                       region = region)
