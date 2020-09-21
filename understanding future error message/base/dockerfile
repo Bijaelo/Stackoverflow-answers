@@ -1,0 +1,17 @@
+FROM amazonlinux:2
+
+RUN  yum update -y \
+	&& yum install -y \ 
+		wget \
+		make \ 
+		cmake \
+		tar \
+		gcc-c++ \
+		gcc-gfortran \
+		libcurl \ 
+		libcurl-devel \
+		libxml2-devel \
+		java-1.8.0-openjdk-headless.x86_64 \
+		java-1.8.0 \
+		readline-devel \
+		lixXt-devel 
