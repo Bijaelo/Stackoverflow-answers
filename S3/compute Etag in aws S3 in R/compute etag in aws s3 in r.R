@@ -2,9 +2,9 @@
 
 # Set region and connection variable
 region <- ''
-pkey <- ''
-psecret <- ''
-pbucket <- ''
+key <- ''
+secret <- ''
+bucket <- ''
 
 calculate_s3_etag <- function(file_path, chunk_size = 100 * 1024**2){
   require(digest)
